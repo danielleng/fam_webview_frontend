@@ -47,24 +47,26 @@ import referralIconImg from '../assets/wallet_screen/icons_referral_gray.svg'
                         <div class="text-sm text-gray-500">S$3.00 expires 6 Aug 2021, 12:00AM </div>
                     </div>
                 </div>
-                <div class="flex flex-row -mt-8 mb-12 w-full border-t-2 border-gray rounded-3xl bg-white">
-                    <div class="ml-8 mr-4 mt-4">
-                        <img :src="gameIconImg" class="w-10"/>
-                    </div>
-                    <div class="mr-4 mt-3">
-                        <div class="text-xl">2 Game Chances</div>
-                        <div class="text-sm text-gray-500">Play and win rewards!</div>
-                    </div>
-                </div>
+                <a href="/">
+                  <div class="flex flex-row -mt-8 mb-12 w-full border-t-2 border-gray rounded-3xl bg-white">
+                      <div class="ml-8 mr-4 mt-4">
+                          <img :src="gameIconImg" class="w-10"/>
+                      </div>
+                      <div class="mr-4 mt-3">
+                          <div class="text-xl">2 Game Chances</div>
+                          <div class="text-sm text-gray-500">Play and win rewards!</div>
+                      </div>
+                  </div>
+                </a>
                 <a href="/referral">
-                <div class="flex flex-row -mt-8 mb-12 w-full border-t-2 border-gray rounded-3xl bg-white">
-                    <div class="ml-8 mr-4 mt-4">
-                        <img :src="referralIconImg" class="w-10"/>
-                    </div>
-                    <div class="mr-4 mt-3 flex flex-col items-center">
-                        <div class="text-xl">Refer a friend</div>
-                    </div>
-                </div>
+                  <div class="flex flex-row -mt-8 mb-12 w-full border-t-2 border-gray rounded-3xl bg-white">
+                      <div class="ml-8 mr-4 mt-4">
+                          <img :src="referralIconImg" class="w-10"/>
+                      </div>
+                      <div class="mr-4 mt-3 flex flex-col items-center">
+                          <div class="text-xl">Refer a friend</div>
+                      </div>
+                  </div>
                 </a>
             </div>
         </div>
