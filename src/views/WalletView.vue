@@ -1,5 +1,6 @@
 <script setup>
 import walletHeroImg from '../assets/wallet_screen/wallet_hero_image@3x.png'
+import memberCardImg from '../assets/wallet_screen/wallet_membercard_image@3x.png'
 import pointsIconImg from '../assets/wallet_screen/icons_point_gray.svg'
 import vouchersIconImg from '../assets/wallet_screen/icons_voucher_gray.svg'
 import parkingIconImg from '../assets/wallet_screen/icons_parkingpoints_gray.svg'
@@ -15,7 +16,7 @@ import referralIconImg from '../assets/wallet_screen/icons_referral_gray.svg'
                     <img :src="walletHeroImg" />
                 </div>
                 <div class="mx-10 -mt-40 mb-40 backdrop-blur-sm">
-                    <img :src="'./src/assets/wallet_screen/wallet_membercard_image@3x.png'" />
+                    <img :src="memberCardImg" />
                 </div>
                 
             </div>
