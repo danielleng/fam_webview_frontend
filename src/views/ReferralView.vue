@@ -1,5 +1,6 @@
 <script setup>
 import referralHeroImg from '../assets/referral_screen/referral_hero_image@3x.jpg'
+import "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
 </script>
 
 <template>
@@ -27,6 +28,12 @@ import referralHeroImg from '../assets/referral_screen/referral_hero_image@3x.jp
                         Terms Line<br>
                     </div>
                 </div>
+
+                <div class="mx-3 my-4">
+                  <lottie-player src="https://assets9.lottiefiles.com/datafiles/gUENLc1262ccKIO/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
+                </div>
+
+                <div class="mx-3 my-4"></div>
             </div>
         </div>
     </body>
