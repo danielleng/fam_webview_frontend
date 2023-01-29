@@ -1,9 +1,12 @@
+<script setup>
+import referralHeroImg from '../assets/referral_screen/referral_hero_image@3x.jpg'
+</script>
 
 <template>
     <body>
         <div class="container mx-auto">
             <div class="flex flex-col">
-                <div><img :src="'./src/assets/referral_screen/referral_hero_image@3x.jpg'" /></div>
+                <div><img id="referralHeroImg" :src="referralHeroImg" /></div>
                 <div class="mx-3 my-4 font-semibold text-xl">
                     Refer & Earn
                 </div>
