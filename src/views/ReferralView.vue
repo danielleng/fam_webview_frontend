@@ -1,39 +1,37 @@
-<script setup>
-import referralHeroImg from '../assets/referral_screen/referral_hero_image@3x.jpg'
-import "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-</script>
 
 <template>
     <body>
         <div class="container mx-auto">
             <div class="flex flex-col">
-                <div><img id="referralHeroImg" :src="referralHeroImg" /></div>
-                <div class="mx-3 my-4 font-semibold text-xl">
-                    Refer & Earn
-                </div>
-                <div class="mx-3 my-4">
-                    <div class="my-4 text-base"><h1>Your Referral Code: XXXXXX</h1></div>
-                    <div class="my-4 text-base">
-                        <p>Both you and your friend gets a $5 ShopFarEast E-Voucher upon successful signup with your code!.</p>
-                        <u>How It Works</u>
-                        Tap the code above and send it to your friend.<br>
-                        Your friend will need to tap the link to download the app.<br>
-                        Once the app is downloaded enter the code during the sign up process.<br>
-                        Upon successful registration you and your friend will both receive a $5 ShopFarEast E-Voucher!<br>
+                <div class="overflow-hidden bg-white">
+                    <ul role="list" class="divide-y divide-gray-200">
+                        <li class="">
+                            <img :src="'./src/assets/referral_screen/referral_hero_image@3x.jpg'" />
+                        </li>
+                        <li class="px-6 py-4">
+                            <div class="font-semibold text-xl text-gray-900">Refer & Earn</div>
+                        </li>
+                        <li class="px-6 py-4">
+                            <div class="text-base text-gray-900">
+                                <p>Both you and your friend gets a $5 ShopFarEast E-Voucher upon successful signup with your code!.</p>
+                                <u>How It Works</u>
+                                Tap the code above and send it to your friend.<br>
+                                Your friend will need to tap the link to download the app.<br>
+                                Once the app is downloaded enter the code during the sign up process.<br>
+                                Upon successful registration you and your friend will both receive a $5 ShopFarEast E-Voucher!<br>
 
-                        <u>Terms & Conditions</u>
-                        Terms Line<br>
-                        Terms Line<br>
-                        Terms Line<br>
-                        Terms Line<br>
-                    </div>
-                </div>
+                                <u>Terms & Conditions</u>
+                                Terms Line<br>
+                                Terms Line<br>
+                                Terms Line<br>
+                                Terms Line<br>
+                            </div>
+                        </li>
 
-                <div class="mx-3 my-4">
-                  <lottie-player src="https://assets9.lottiefiles.com/datafiles/gUENLc1262ccKIO/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
+                        <!-- More items... -->
+                    </ul>
                 </div>
-
-                <div class="mx-3 my-4"></div>
+                
             </div>
         </div>
     </body>

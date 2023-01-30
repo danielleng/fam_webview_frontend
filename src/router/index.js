@@ -27,7 +27,7 @@ const router = createRouter({
     },
     {
       path: '/referral',
-      name: 'referral',
+      name: 'Referral',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -35,11 +35,27 @@ const router = createRouter({
     },
     {
       path: '/wallet',
-      name: 'wallet',
+      name: 'Wallet',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/WalletView.vue')
+    },
+    {
+      path: '/scan',
+      name: 'Scan',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ScanView.vue')
+    },
+    {
+      path: '/services',
+      name: 'Services',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ServicesView.vue')
     }
   ]
 })
