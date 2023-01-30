@@ -68,6 +68,27 @@ import referralIconImg from '../assets/wallet_screen/icons_referral_gray.svg'
                       </div>
                   </div>
                 </a>
+
+                <a href="/services">
+                  <div class="flex flex-row -mt-8 mb-12 w-full border-t-2 border-gray rounded-3xl bg-white">
+                      <div class="ml-8 mr-4 mt-4">
+                          <img :src="gameIconImg" class="w-10"/>
+                      </div>
+                      <div class="mr-4 mt-3">
+                          <div class="text-xl">Services</div>
+                      </div>
+                  </div>
+                </a>
+                <a href="/camera">
+                    <div class="flex flex-row -mt-8 mb-12 w-full border-t-2 border-gray rounded-3xl bg-white">
+                        <div class="ml-8 mr-4 mt-4">
+                            <img :src="gameIconImg" class="w-10"/>
+                        </div>
+                        <div class="mr-4 mt-3">
+                            <div class="text-xl">Camera</div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </body>
