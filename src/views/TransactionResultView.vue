@@ -1,5 +1,5 @@
 <script setup>
-import previewImage from '../assets/scan_screen/receipt.png';
+import heroImage from '../assets/transactionresult_screen/success.png';
 </script>
 
 <script>
@@ -35,14 +35,14 @@ export default {
             // }
         },
         directoScreen(event){
-            location.href = "/transactionresult";
+            location.href = "/wallet";
         }
     }
 }
 </script>
 
 <template>
-    <div class="bg-gray-300 dark:bg-slate-900 h-screen">
+    <div class="bg-white dark:bg-slate-900 h-screen">
         <div class="container mx-auto h-full">
             <div class="flex flex-col static">
                 <div class="px-2 py-2 w-full absolute">
@@ -64,23 +64,15 @@ export default {
                         </div>
                     </button>
                 </div>
-                <div class="px-2 py-2 h-2/4">
-                    <img :src="previewImage" class="rounded-2xl w-2/3 mx-auto" />
+                <div>
+                    <img :src="heroImage" class="rounded-2xl w-full mx-auto" />
                 </div>
                 <div class="px-5 pt-2 pb-10 fixed bottom-0 w-full bg-white dark:bg-slate-800 drop-shadow rounded-t-2xl">
-                    <form action="/transactionresult">
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-900 dark:text-gray-100">Receipt Amount</label>
-                            <div class="mt-1">
-                                <input type="number" name="dollarAMt" id="dollarAmt"
-                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                    placeholder="Enter Receipt Amount">
-                            </div>
-                        </div>
-                        <div class="pt-4">
-                            <button type="submit" @click="directoScreen" class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 dark:bg-gray-500 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Next</button>
-                        </div>
-                    </form>
+                    <div>You have successfully sent your receipt.</div>
+                    <div>Your receipt will be processed in 1 working days.</div>
+                    <div class="pt-4">
+                        <button type="submit" @click="directoScreen" class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 dark:bg-gray-500 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Close</button>
+                    </div>
                 </div>
 
                 <!-- More items... -->
