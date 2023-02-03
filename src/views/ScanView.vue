@@ -1,40 +1,29 @@
 <script setup>
-import referralHeroImg from '../assets/referral_screen/referral_hero_image.jpg'
+import previewImage from '../assets/scan_screen/receipt.png'
 </script>
 
 <template>
-    <body>
-        <div class="container mx-auto">
+    <body class="bg-gray-300 h-screen">
+        <div class="container mx-auto pb-28 bg-gray-30 h-full">
             <div class="flex flex-col">
-                <div class="overflow-hidden bg-white">
-                    <ul role="list" class="divide-y divide-gray-200">
-                        <li class="">
-                            <img :src="referralHeroImg" />
-                        </li>
-                        <li class="px-6 py-4">
-                            <div class="font-semibold text-xl text-gray-900">Scan Receipt & Earn Points!</div>
-                        </li>
-                        <li class="px-6 py-4">
-                            <div class="text-base text-gray-900">
-                                <p>Both you and your friend gets a $5 ShopFarEast E-Voucher upon successful signup with your code!.</p>
-                                <u>How It Works</u>
-                                Tap the code above and send it to your friend.<br>
-                                Your friend will need to tap the link to download the app.<br>
-                                Once the app is downloaded enter the code during the sign up process.<br>
-                                Upon successful registration you and your friend will both receive a $5 ShopFarEast E-Voucher!<br>
-
-                                <u>Terms & Conditions</u>
-                                Terms Line<br>
-                                Terms Line<br>
-                                Terms Line<br>
-                                Terms Line<br>
-                            </div>
-                        </li>
-
-                        <!-- More items... -->
-                    </ul>
+                <div class="px-2 py-2">
+                    <img :src="previewImage" class="rounded-2xl w-2/3 mx-auto"/>
                 </div>
-                
+                <div class="px-5 pt-2 pb-10 fixed bottom-0 w-full bg-white drop-shadow rounded-t-2xl">
+                    <form>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <div class="mt-1">
+                                <input type="email" name="email" id="email" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Next</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- More items... -->
             </div>
         </div>
     </body>
