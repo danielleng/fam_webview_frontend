@@ -6,14 +6,14 @@ import referralShareIcon from '../assets/referral_screen/icons_share_gray.svg'
 <template>
     <body>
         <div class="container mx-auto mb-28">
-            <ul role="list" class="">
-                <li class="px-5 pt-6 pb-2">
-                    <div class="text-2xl font-semibold text-gray-700">Refer &amp; Earn Points!</div>
-                </li>
-                <li class="px-2 py-2">
-                    <img :src="referralHeroImg" class="rounded-2xl"/>
-                </li>
-                <li class="px-5 py-2">
+            <div class="flex flex-col">
+                <div class="px-5 pt-6 pb-2">
+                    <div class="text-2xl md:text-3xl font-medium text-gray-700">Refer &amp; Earn Points!</div>
+                </div>
+                <div class="px-2 py-2">
+                    <img :src="referralHeroImg" class="rounded-2xl w-full"/>
+                </div>
+                <div class="px-5 py-2">
                     <div class="text-base text-gray-700 flex flex-row px-4 py-3 rounded-lg border-2 border-gray-500">
                         <div class="flex-1">
                             <div class="text-sm">My Referral Code</div>
@@ -23,8 +23,8 @@ import referralShareIcon from '../assets/referral_screen/icons_share_gray.svg'
                             <img :src="referralShareIcon" class="w-6" />
                         </div> 
                     </div>
-                </li>
-                <li class="px-5 py-2">
+                </div>
+                <div class="px-5 py-2">
                     <div class="text-sm text-gray-700">
                         <p>Both you and your friend gets a $5 ShopFarEast E-Voucher upon successful signup with your code!.</p>
                         <br>
@@ -40,10 +40,10 @@ import referralShareIcon from '../assets/referral_screen/icons_share_gray.svg'
                         Terms Line<br>
                         Terms Line<br></p>
                     </div>
-                </li>
+                </div>
 
                 <!-- More items... -->
-            </ul>
+            </div>
         </div>
     </body>
   </template>

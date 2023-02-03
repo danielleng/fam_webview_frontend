@@ -1,5 +1,5 @@
 <script setup>
-import referralHeroImg from '../assets/referral_screen/referral_hero_image@3x.jpg'
+import referralHeroImg from '../assets/referral_screen/referral_hero_image.jpg'
 </script>
 
 <template>
