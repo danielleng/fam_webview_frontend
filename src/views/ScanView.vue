@@ -1,51 +1,70 @@
 <script setup>
 import previewImage from '../assets/scan_screen/receipt.png';
+import gsap from 'gsap';
+import { onMounted } from "vue";
+
+onMounted(() => {
+  gsap.from("#bottomAppSheet", {
+    duration: .8,
+    y: 300,
+    ease: 'easeOut'
+  });
+  gsap.from("#topAppBar", {
+    duration: .5,
+    y: -300,
+    ease: 'easeOut'
+  });
+  gsap.from("#content", {
+    duration: .3,
+    opacity: 0,
+    ease: 'ease'
+  });
+});
 </script>
 
 <script>
-export default {
-    methods: {
-        switchThemeMode(event) {
-            const htmlElement = document.querySelector("html");
-            var activeLightThemeModeIcon = document.getElementById("activeThemeMode-LightIsActive");
-            var activeDarkThemeModeIcon = document.getElementById("activeThemeMode-DarkIsActive");
-            var appliedThemeMode = htmlElement.getAttribute('theme-mode');
-            if (appliedThemeMode == "dark") {
-                // if there is already a dark mode applied, remove it to become light mode. the attribute is theme-mode="".
-                // apply light mode
-                htmlElement.setAttribute("theme-mode", "");
-                activeLightThemeModeIcon.classList.remove("hidden");
-                activeLightThemeModeIcon.classList.add("block");
-                activeDarkThemeModeIcon.classList.remove("block");
-                activeDarkThemeModeIcon.classList.add("hidden");
-                console.log('Twas dark mode, changed to light mode');
-            } else {
-                // else apply dark mode. the attribute is theme-mode="dark".
-                // apply dark mode
-                htmlElement.setAttribute("theme-mode", "dark");
-                activeLightThemeModeIcon.classList.remove("block");
-                activeLightThemeModeIcon.classList.add("hidden");
-                activeDarkThemeModeIcon.classList.remove("hidden");
-                activeDarkThemeModeIcon.classList.add("block");
-                console.log('Twas light mode, changed to dark mode');
+    export default {
+        methods: {
+            switchThemeMode(event) {
+                const htmlElement = document.querySelector("html");
+                var activeLightThemeModeIcon = document.getElementById("activeThemeMode-LightIsActive");
+                var activeDarkThemeModeIcon = document.getElementById("activeThemeMode-DarkIsActive");
+                var appliedThemeMode = htmlElement.getAttribute('theme-mode');
+                if (appliedThemeMode == "dark") {
+                    // if there is already a dark mode applied, remove it to become light mode. the attribute is theme-mode="".
+                    // apply light mode
+                    htmlElement.setAttribute("theme-mode", "");
+                    activeLightThemeModeIcon.classList.remove("hidden");
+                    activeLightThemeModeIcon.classList.add("block");
+                    activeDarkThemeModeIcon.classList.remove("block");
+                    activeDarkThemeModeIcon.classList.add("hidden");
+                    console.log('Twas dark mode, changed to light mode');
+                } else {
+                    // else apply dark mode. the attribute is theme-mode="dark".
+                    // apply dark mode
+                    htmlElement.setAttribute("theme-mode", "dark");
+                    activeLightThemeModeIcon.classList.remove("block");
+                    activeLightThemeModeIcon.classList.add("hidden");
+                    activeDarkThemeModeIcon.classList.remove("hidden");
+                    activeDarkThemeModeIcon.classList.add("block");
+                    console.log('Twas light mode, changed to dark mode');
+                }
+                // `event` is the native DOM event
+                // if (event) {
+                // alert(event.target.tagName);
+                // }
+            },
+            directoScreen(event){
+                location.href = "/transactionresult";
             }
-            // `event` is the native DOM event
-            // if (event) {
-            // alert(event.target.tagName);
-            // }
-        },
-        directoScreen(event){
-            location.href = "/transactionresult";
         }
-    }
-}
+    };
 </script>
-
 <template>
     <div class="bg-gray-300 dark:bg-slate-900 h-screen">
         <div class="container mx-auto h-full">
             <div class="flex flex-col static">
-                <div class="px-2 py-2 w-full absolute">
+                <div id="topAppBar" class="px-2 py-2 w-full absolute">
                     <button @click="switchThemeMode()" class="h-12 w-12 rounded-full justify-center shadow-lg bg-white dark:bg-gray-700">
                         <div id="activeThemeMode-LightIsActive" class="block fill-gray-900 dark:fill-gray-100 w-12 h-12">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
@@ -64,10 +83,10 @@ export default {
                         </div>
                     </button>
                 </div>
-                <div class="px-2 py-2 h-2/4">
+                <div id="content" class="px-2 py-2 h-2/4">
                     <img :src="previewImage" class="rounded-2xl w-2/3 mx-auto" />
                 </div>
-                <div class="px-5 pt-2 pb-10 fixed bottom-0 w-full bg-white dark:bg-slate-800 drop-shadow rounded-t-2xl">
+                <div id="bottomAppSheet" class="px-5 pt-2 pb-10 fixed bottom-0 w-full bg-white dark:bg-slate-800 drop-shadow rounded-t-3xl">
                     <form action="/transactionresult">
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-900 dark:text-gray-100">Receipt Amount</label>
